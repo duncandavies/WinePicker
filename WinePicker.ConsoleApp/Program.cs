@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace WinePicker
+namespace WinePicker.ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Press any key to begin!");
             Console.ReadKey();
@@ -103,6 +101,5 @@ namespace WinePicker
             Console.WriteLine(@"*           |-----|  __|__   |      *");
             Console.WriteLine(@"            `-----`        __|__");
         }
-
     }
 }
