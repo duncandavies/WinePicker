@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading;
+using WinePicker.Shared.Models;
 
 namespace WinePicker.ConsoleApp
 {
@@ -38,10 +40,10 @@ namespace WinePicker.ConsoleApp
             Console.ReadKey();
         }
 
-        private static List<string> GetWineList()
+        private static List<WineModel> GetWineList()
         {
-            var wines = File.ReadAllText(@"C:\Code\WinePicker\WinePicker\Wineoptions.txt");
-            return wines.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+            var wines = File.ReadAllText(@"C:\Code\WinePicker\WinePicker\Wineoptions.json");
+            return JsonSerializer.Deserialize<List<WineModel>>(wines);
         }
 
         private static void AsciiArtWineTime()
@@ -54,14 +56,14 @@ namespace WinePicker.ConsoleApp
             Console.WriteLine(@"  \_/\_/ |_|_| |_|\___|    \__|_|_| |_| |_|\___|");
         }
 
-        private static string GetResultWithRandomDisplay(List<string> wineList, int seconds)
+        private static string GetResultWithRandomDisplay(List<WineModel> wineList, int seconds)
         {
             var randomWine = string.Empty;
             for (var i = 0; i < seconds * 10; i++)
             {
                 var rng = new Random();
                 var index = rng.Next(0, wineList.Count() - 1);
-                randomWine = wineList[index];
+                randomWine = wineList[index].Name;
                 ClearCurrentConsoleLine();
                 Console.Write(randomWine);
                 Thread.Sleep(100);
