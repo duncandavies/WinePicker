@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinePicker.ConsoleApp", "Wi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinePicker.Shared", "WinePicker.Shared\WinePicker.Shared.csproj", "{ED72149B-5A07-470D-9E28-A216F7FE7671}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinePicker.Repo", "WinePicker.Repo\WinePicker.Repo.csproj", "{AB1EE83E-99D1-447A-913F-E7E367FE9449}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ED72149B-5A07-470D-9E28-A216F7FE7671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED72149B-5A07-470D-9E28-A216F7FE7671}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED72149B-5A07-470D-9E28-A216F7FE7671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

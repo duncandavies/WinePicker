@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.Json;
 using System.Threading;
+using WinePicker.Repo;
 using WinePicker.Shared.Models;
 
 namespace WinePicker.ConsoleApp
@@ -12,11 +11,11 @@ namespace WinePicker.ConsoleApp
     {
         private static void Main(string[] args)
         {
+            var wineList = GetWineList();
+
             Console.WriteLine("Press any key to begin!");
             Console.ReadKey();
             ClearCurrentConsoleLine();
-
-            var wineList = GetWineList();
 
             AsciiArtWineTime();
 
@@ -42,8 +41,8 @@ namespace WinePicker.ConsoleApp
 
         private static List<WineModel> GetWineList()
         {
-            var wines = File.ReadAllText(@"C:\Code\WinePicker\WinePicker\Wineoptions.json");
-            return JsonSerializer.Deserialize<List<WineModel>>(wines);
+            var mongo = new MongoDatabase();
+            return mongo.GetAllWines();
         }
 
         private static void AsciiArtWineTime()
