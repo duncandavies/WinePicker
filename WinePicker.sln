@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinePicker.Shared", "WinePi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinePicker.Repo", "WinePicker.Repo\WinePicker.Repo.csproj", "{AB1EE83E-99D1-447A-913F-E7E367FE9449}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinePicker.Blazor.Server", "WinePicker.Blazor\Server\WinePicker.Blazor.Server.csproj", "{D34B12A6-0690-4944-AED5-FDE76B7145EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinePicker.Blazor.Client", "WinePicker.Blazor\Client\WinePicker.Blazor.Client.csproj", "{2498297C-06EC-4DBB-8C6D-B62F74D72C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinePicker.Blazor.Shared", "WinePicker.Blazor\Shared\WinePicker.Blazor.Shared.csproj", "{63AC613B-471B-408A-A2E8-05ECB059D103}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB1EE83E-99D1-447A-913F-E7E367FE9449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D34B12A6-0690-4944-AED5-FDE76B7145EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34B12A6-0690-4944-AED5-FDE76B7145EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34B12A6-0690-4944-AED5-FDE76B7145EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34B12A6-0690-4944-AED5-FDE76B7145EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2498297C-06EC-4DBB-8C6D-B62F74D72C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2498297C-06EC-4DBB-8C6D-B62F74D72C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2498297C-06EC-4DBB-8C6D-B62F74D72C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2498297C-06EC-4DBB-8C6D-B62F74D72C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AC613B-471B-408A-A2E8-05ECB059D103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AC613B-471B-408A-A2E8-05ECB059D103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AC613B-471B-408A-A2E8-05ECB059D103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AC613B-471B-408A-A2E8-05ECB059D103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
