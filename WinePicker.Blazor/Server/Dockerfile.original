@@ -4,15 +4,12 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-EXPOSE 27017
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["WinePicker.Blazor/Server/WinePicker.Blazor.Server.csproj", "WinePicker.Blazor/Server/"]
-COPY ["../WinePicker.BL/WinePicker.BL.csproj", "../WinePicker.BL/"]
-COPY ["WinePicker.Shared/WinePicker.Shared.csproj", "WinePicker.Shared/"]
 COPY ["WinePicker.Blazor/Client/WinePicker.Blazor.Client.csproj", "WinePicker.Blazor/Client/"]
-COPY ["WinePicker.Repo/WinePicker.Repo.csproj", "WinePicker.Repo/"]
+COPY ["WinePicker.Blazor/Shared/WinePicker.Blazor.Shared.csproj", "WinePicker.Blazor/Shared/"]
 RUN dotnet restore "WinePicker.Blazor/Server/WinePicker.Blazor.Server.csproj"
 COPY . .
 WORKDIR "/src/WinePicker.Blazor/Server"

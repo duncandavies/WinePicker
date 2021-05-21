@@ -1,0 +1,48 @@
+﻿@page "/winelist"
+@using WinePicker.Shared.Models
+@inject HttpClient Http
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (wines == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Region</th>
+                <th>Variety</th>
+                <th>Volume</th>
+                <th>Alcohol Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var wine in wines)
+            {
+            <tr>
+                <td>@wine.Name</td>
+                <td>@wine.Region</td>
+                <td>@wine.Variety</td>
+                <td>@wine.Volume_ml</td>
+                <td>@wine.AlcholContent</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WineModel[] wines;
+
+    protected override async Task OnInitializedAsync()
+    {
+        wines = await Http.GetFromJsonAsync<WineModel[]>("Wines");
+    }
+
+}

@@ -5,6 +5,7 @@
     <UserSecretsId>593f058b-270e-4505-9cc9-e55a1c7ad5d5</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,8 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\WinePicker.BL\WinePicker.BL.csproj" />
+    <ProjectReference Include="..\..\WinePicker.Repo\WinePicker.Repo.csproj" />
+    <ProjectReference Include="..\..\WinePicker.Shared\WinePicker.Shared.csproj" />
     <ProjectReference Include="..\Client\WinePicker.Blazor.Client.csproj" />
-    <ProjectReference Include="..\Shared\WinePicker.Blazor.Shared.csproj" />
   </ItemGroup>
 
 

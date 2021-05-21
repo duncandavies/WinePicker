@@ -42,7 +42,7 @@ namespace WinePicker.ConsoleApp
         private static List<WineModel> GetWineList()
         {
             var mongo = new MongoDatabase();
-            return mongo.GetAllWines();
+            return mongo.GetAllWines().Result;
         }
 
         private static void AsciiArtWineTime()

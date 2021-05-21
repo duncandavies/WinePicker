@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  winepicker.blazor.server:
+    image: ${DOCKER_REGISTRY-}winepickerblazorserver
+    build:
+      context: .
+      dockerfile: WinePicker.Blazor/Server/Dockerfile
+
+  winepicker.Database:
+    image: .mongodb

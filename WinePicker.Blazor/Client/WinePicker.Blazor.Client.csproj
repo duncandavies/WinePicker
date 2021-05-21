@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\WinePicker.Blazor.Shared.csproj" />
+    <ProjectReference Include="..\..\WinePicker.Shared\WinePicker.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
